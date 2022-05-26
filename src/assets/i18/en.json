@@ -10,7 +10,8 @@
   },
   "homepage": {
     "title": "Ng Book Finder",
-    "description" : "Search the world's most comprehensive index of full-text books."
+    "description" : "Search the world's most comprehensive index of full-text books.",
+    "search" : "Search..."
   },
   "registration": {
     "description": "Create a free account!",

@@ -1,1 +1,26 @@
-<p>books works!</p>
+<div class="text-center m-5">
+  <h1 class="h3 mb-3 font-weight-normal">{{ 'homepage.title' | translate }}</h1>
+  <p>{{ 'homepage.description' | translate }}</p>
+</div>
+<div class="container">
+    <app-search-form></app-search-form>
+</div>
+
+<div class="container ">
+  <div class="row m-5">
+    <div class="col-sm" *ngFor="let item of [1,2,3]">
+     <div class="card">
+       <div class="content">
+         <h2 class="title">
+           To the beach
+         </h2>
+         <p class="copy">Plan your next beach trip with these fabulous destinations</p>
+         <button class="btn">View Trips</button>
+       </div>
+     </div>
+    </div>
+
+
+
+  </div>
+</div>

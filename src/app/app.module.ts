@@ -16,6 +16,7 @@ import {AuthGuard} from './auth.guard';
 import {CustomHttpInterceptorService} from './services/custom-http-interceptor.service';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {RegistrationComponent} from './components/registration/registration.component';
+import {FinderModule} from "./finder/finder.module";
 
 export const createTranslateLoader = (http: HttpClient) => {
     return new TranslateHttpLoader(http, './assets/i18/', '.json');
@@ -37,6 +38,7 @@ export const createTranslateLoader = (http: HttpClient) => {
         HttpClientModule,
         ReactiveFormsModule,
         FormsModule,
+
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
