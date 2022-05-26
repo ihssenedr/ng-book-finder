@@ -9,7 +9,8 @@
     "welcome_message_body" : "You have successfully logged in."
   },
   "homepage": {
-    "title": "Angular Boilerplate"
+    "title": "Ng Book Finder",
+    "description" : "Search the world's most comprehensive index of full-text books."
   },
   "registration": {
     "description": "Create a free account!",
