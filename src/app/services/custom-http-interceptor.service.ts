@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {catchError} from 'rxjs/operators';
+import {environment} from "../../environments/environment";
 
 @Injectable({
     providedIn: 'root'
@@ -10,11 +11,11 @@ export class CustomHttpInterceptorService implements HttpInterceptor {
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-        const token = sessionStorage.getItem('token');
+        const token = sessionStorage.getItem(environment.key);
 
         req = req.clone({
             setHeaders: {
-                Authorization: `Bearer ${token}`
+                Authorization: `Key ${token}`
             }
         });
 

@@ -1,6 +1,18 @@
 <div class="form-label-group">
-  <input type="text" id="inputName" class="form-control" placeholder="{{ 'homepage.search' | translate }}" required autofocus
-         autocomplete="off" formControlName="name">
+  <form [formGroup]="searchForm">
+    <div class="form-row">
+      <div class="col-10">
+        <input type="text" id="inputName" class="form-control" placeholder="{{ 'homepage.search' | translate }}" required autofocus
+               autocomplete="off" formControlName="search">
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-primary" (click)="onSearchClick()">Search</button>
+      </div>
+    </div>
+
+
+
+  </form>
   <!--<div class="alert alert-danger mt-2" *ngIf="invalidName()"> {{ 'validations.name' | translate }}</div>-->
 </div>
 

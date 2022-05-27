@@ -3,18 +3,18 @@
   <p>{{ 'homepage.description' | translate }}</p>
 </div>
 <div class="container">
-    <app-search-form></app-search-form>
+    <app-search-form (searchResultList)="handleSearchData($event)" ></app-search-form>
 </div>
 
 <div class="container ">
-  <div class="row m-5">
-    <div class="col-sm" *ngFor="let item of [1,2,3]">
-     <div class="card">
+  <div class="row">
+    <div class="col-sm " *ngFor="let item of items">
+     <div class="card mb-5 mt-5">
        <div class="content">
          <h2 class="title">
-           To the beach
+           {{item.volumeInfo.title |slice : 0: 17}}
          </h2>
-         <p class="copy">Plan your next beach trip with these fabulous destinations</p>
+         <p class="copy">test</p>
          <button class="btn">View Trips</button>
        </div>
      </div>
